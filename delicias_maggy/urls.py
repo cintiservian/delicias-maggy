@@ -16,10 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from web import views
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+
+def exito(request):
+    return render(request, 'exito.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.inicio,name="inicio"),
     path('acerca',views.acerca,name="acerca"),
     path('bienvenido',views.bienvenido,name="bienvenido"),
+    path('contacto/', views.contacto, name='contacto'),
+    path('exito/', views.exito, name='exito'),
 ]

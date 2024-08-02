@@ -1,5 +1,5 @@
 from django.db import models
-
+import uuid
 
 # Create your models here.
 class tartas(models.Model):
@@ -12,4 +12,14 @@ class tartas(models.Model):
 
     def _str_(self):
         return self.name
+    
+
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    customer_email = models.EmailField()
+    customer_name = models.CharField(max_length=64)
+    message = models.TextField()
+
+    def __str__(self):
+        return f"{self.customer_name} ({self.customer_email})"  
     
