@@ -1,0 +1,11 @@
+<!-- templates/registration/logout.html -->
+
+{% extends "base.html" %}
+
+{% block contenido %}
+  <h2>Estás cerrando sesión</h2>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Cerrar sesión</button>
+  </form>
+{% endblock %}

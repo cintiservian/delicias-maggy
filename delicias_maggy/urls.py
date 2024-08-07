@@ -14,20 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from web import views
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 
-def exito(request):
-    return render(request, 'exito.html')
+# def exito(request):
+#     return render(request, 'exito.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.inicio,name="inicio"),
     path('acerca',views.acerca,name="acerca"),
     path('bienvenido',views.bienvenido,name="bienvenido"),
-    path('contacto/', views.contacto, name='contacto'),
+    path('contacto', views.contacto, name='contacto'),
     path('exito/', views.exito, name='exito'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    # path('tartas/', views.tartas_view, name='tartas'),
+    path('quienes-somos/', views.quienes_somos_view, name='quienes_somos'),
 ]

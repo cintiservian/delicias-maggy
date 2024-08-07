@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block contenido %}
 <div class="container mt-5">
     <h1>Contacto</h1>
-    <form method="post">
+    <form action="/contacto" method="post">
         {% csrf_token %}
 
         <div class="form-group">
@@ -24,7 +24,7 @@
             {{ form.message.errors }}
         </div>
 
-        {{ form.as_p }}
+    
         <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </div>

@@ -9,7 +9,7 @@ class tartas(models.Model):
     image_url= models.URLField()   # del tipo URLField
     slug= models.SlugField()  # del tipo SlugField
     is_private= models.BooleanField()  # del tipo BooleanField
-
+    precio = models.DecimalField(max_digits=10, decimal_places=2,default=10.00)
     def _str_(self):
         return self.name
     
@@ -20,6 +20,6 @@ class ContactForm(models.Model):
     customer_name = models.CharField(max_length=64)
     message = models.TextField()
 
-    def __str__(self):
-        return f"{self.customer_name} ({self.customer_email})"  
+    # def __str__(self):
+    #     return f"{self.customer_name} ({self.customer_email})"  
     

@@ -1,0 +1,35 @@
+Presentación del Proyecto 'Delicias Maggy'
+Fecha: [12-08-2024]
+
+1. Descripción General del Sitio Web:
+- El sitio web 'Delicias Maggy' es una plataforma de pastelería donde los usuarios pueden ver y comprar tartas y productos relacionados.
+- Propósito: Brindar una experiencia fácil y accesible para que los clientes puedan conocer y adquirir productos de pastelería.
+
+2. Características Base del Sitio Web:
+- Listado de productos con sus detalles.
+- Página de inicio con una descripción general.
+- Sistema de autenticación: registro, inicio de sesión, y cierre de sesión.
+- Navegación básica entre las distintas secciones del sitio.
+
+3. Características Personalizadas Añadidas:
+- Atributo `precio` añadido al modelo `tartas` y mostrado en la vista correspondiente.
+- Nueva página "Quiénes somos" para información complementaria sobre la pastelería.
+
+4. Problemas y Dificultades - Sitio Web Base:
+- Configuración inicial del entorno de desarrollo y manejo de migraciones de base de datos.
+- Integración del sistema de autenticación con el sitio web.
+- Diseño y desarrollo de una interfaz de usuario amigable.
+
+5. Problemas y Dificultades - Características Personalizadas:
+- Desafíos al modificar modelos existentes sin causar errores en la base de datos.
+- Configuración de nuevas rutas y vistas para las características personalizadas.
+- Implementación de nuevas funcionalidades manteniendo la coherencia con las funcionalidades existentes.
+
+6. Conclusiones:
+- El desarrollo del proyecto permitió aprender sobre la integración y personalización de un sitio web usando Django.
+- Futuras mejoras podrían incluir la adición de un sistema de comentarios o reseñas de productos, y una sección de promociones.
+- Las características personalizadas mejoraron significativamente la experiencia del usuario, proporcionando más información y funcionalidades útiles.
+
+Preguntas y Respuestas:
+- Espacio para responder preguntas de la audiencia sobre el proyecto y su desarrollo.
+- Por que son necesarias las migraciones o para qué sirven

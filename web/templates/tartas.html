@@ -1,0 +1,16 @@
+<!-- templates/tartas.html -->
+
+{% extends "base.html" %}
+
+{% block contenido %}
+  <h2>Tartas</h2>
+  <ul>
+    {% for tarta in tartas %}
+      <li>
+        <h3>{{ tarta.nombre }}</h3>
+        <p>Sabor: {{ tarta.sabor }}</p>
+        <p>Precio: {{ tarta.precio }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
