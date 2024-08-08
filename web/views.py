@@ -1,6 +1,5 @@
-from django.shortcuts import render ,redirect
-from .models import tartas, ContactForm
-
+from django.shortcuts import render ,redirect, get_object_or_404
+from .models import tartas, ContactForm, Favoritos 
 from .forms import ContactFormForm , ContactFormModelForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -45,3 +44,22 @@ def tartas_view(request):
 
 def quienes_somos_view(request):
     return render(request, 'quienes_somos.html')
+
+def tarta_detalle(request, tarta_id):
+    tarta = get_object_or_404(tartas,pk=tarta_id)
+    return render(request,'tarta_detalle.html',{'tarta':tarta})
+
+def lista_favorito(request):
+    favoritos= Favoritos.objects.filter(user=request.user)
+    return render(request,'favoritos.html',{'lista_favoritos':favoritos})
+
+@login_required
+def agregarFavorito(request, tarta_id):
+    tarta_favorita = get_object_or_404(tartas, id=tarta_id)
+    favorite, created = Favoritos.objects.get_or_create(user=request.user, tarta=tarta_favorita)
+    if created:
+        # El flan se ha añadido a favoritos
+        pass
+    url_previa = request.META.get('HTTP_REFERER', 'default_url')
+    return redirect(url_previa)
+

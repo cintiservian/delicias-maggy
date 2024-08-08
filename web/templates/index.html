@@ -9,7 +9,9 @@
         {% for tortas in tartaletas%}
         <div class="col-md-4 mt-4 mb-2">
         <div class="card" style="width: 18rem;">
+            <a href="{%url 'tarta_detalle' tortas.id%}">
             <img src={{tortas.image_url}} class="card-img-top" alt="...">
+            </a>
             <div class="card-body">
             <h5 class="card-title">{{tortas.name}}</h5>
             <p class="card-text">{{tortas.description}}</p>

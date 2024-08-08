@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block contenido%}
+
+<div class="container">
+
+    <div class="container-fluid py-5 bg-warning text-light">
+        <h1 class="display-6 fw-bold">Favoritos de {{user.get_username}}.</h1>
+
+      </div>
+
+    <div class="row">
+
+        {% for tartasFavItem in lista_favoritos%}
+        <div class="col-md-4 mt-4 mb-2">
+        <div class="card" style="width: 18rem;">
+            <img src={{tartasFavItem.tarta.image_url}} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{tartasFavItem.tarta.name}}</h5>
+            <p class="card-text">{{tartasFavItem.tarta.description}}</p>
+            </div>
+        </div> 
+    </div>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endblock%}

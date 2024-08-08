@@ -33,4 +33,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     # path('tartas/', views.tartas_view, name='tartas'),
     path('quienes-somos/', views.quienes_somos_view, name='quienes_somos'),
+    path('tarta/<int:tarta_id>/', views.tarta_detalle, name='tarta_detalle'),
+    path('favoritos/',views.lista_favorito,name='listafavoritos'),
+    path('agregarFavorito/<int:tarta_id>/', views.agregarFavorito, name='agregar_favorito'),
 ]

@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from django.contrib.auth.models import User
 
 # Create your models here.
 class tartas(models.Model):
@@ -20,6 +21,14 @@ class ContactForm(models.Model):
     customer_name = models.CharField(max_length=64)
     message = models.TextField()
 
-    # def __str__(self):
-    #     return f"{self.customer_name} ({self.customer_email})"  
-    
+
+class Favoritos(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    tarta = models.ForeignKey(tartas, on_delete=models.CASCADE)
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'tarta')
+   
+   
+   
