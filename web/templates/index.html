@@ -5,17 +5,46 @@
 <div class="container mt-5">
 
     <div class="row">
-
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://matiaschavero.com/wp-content/uploads/2021/02/tartaricota-2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://imag.bonviveur.com/prensentacion-de-la-pasta-frola.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbr4R3JZj-Ldf1PidWeli0BoErfvWsc93rKg&s" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img-global.cpcdn.com/recipes/b6e8976d54472968/1200x630cq70/photo.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         {% for tortas in tartaletas%}
         <div class="col-md-4 mt-4 mb-2">
         <div class="card" style="width: 18rem;">
             <a href="{%url 'tarta_detalle' tortas.id%}">
-            <img src={{tortas.image_url}} class="card-img-top" alt="...">
+            <img src={{tortas.image_url}} class="card-img-top" alt="..." width="286" height="189">
             </a>
-            <div class="card-body">
-            <h5 class="card-title">{{tortas.name}}</h5>
-            <p class="card-text">{{tortas.description}}</p>
-            <h5 class="card-text">{{tortas.precio}}</h5>
+            <div class="card-body bg-light text-black">
+            <center><h5 class="card-title">{{tortas.name}}</h5></center>
+            <center><p class="card-text">{{tortas.description}}</p></center>
+            <center><h5 class="card-text">$ {{tortas.precio}}</h5></center>
             </div>
         </div> 
     </div>

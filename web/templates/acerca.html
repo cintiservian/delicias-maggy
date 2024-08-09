@@ -3,9 +3,39 @@
 
 
     {% block contenido %}
-    <div style='background: rgb(132, 180, 151);'class= "container mt-5">
-        <h5>Acerca de Delicias Maggy</h5>
-        <p>Delicias Maggy es una tienda dedicada a ofrecer las mejores tartas y postres para el desayuno o la merienda. Nuestro compromiso es brindar productos de alta calidad hechos con ingredientes frescos y naturales. ¡Gracias por visitarnos!</p>
-        </div>
+    <div style='background: rgb(255, 255, 255);'class= "container mt-5">
+        <center><h3>Acerca de Delicias Maggy</h3></center>
+        <p><font size="4"> Maggy es una tienda dedicada a ofrecer las mejores tartas y postres para el desayuno o la merienda. Nuestro compromiso es brindar productos de alta calidad hechos con ingredientes frescos y naturales. ¡Gracias por visitarnos!</font></p>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://st3.depositphotos.com/10614052/31770/i/450/depositphotos_317702488-stock-photo-young-confectioners-with-tasty-desserts.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://proingra.com/wp-content/uploads/2021/04/29-ABR-BRAHMAN.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.gasma.es/wp-content/uploads/2021/12/IMG_6467.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://img-global.cpcdn.com/recipes/b6e8976d54472968/1200x630cq70/photo.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
     {% endblock %}
     

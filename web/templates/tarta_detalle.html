@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{tarta.name}}</h5>
                     <p class="card-text">{{tarta.description}}</p>
-                    <p class="card-text">{{tarta.precio}}</p>
+                    <p class="card-text"><b>${{tarta.precio}}</b></p>
                     <p class="card-text"></p>
                     {% if user.is_authenticated %}
                     <a href="{% url 'agregar_favorito' tarta.id %}" class="btn btn-warning">Añadir a favoritos</a>
