@@ -22,8 +22,8 @@ def bienvenido (request):
 
 def contacto(request):
     if request.method == "POST":
-        # form = ContactFormForm(request.POST)
-        form=ContactFormModelForm(request.POST)
+        form = ContactFormForm(request.POST)
+        #form=ContactFormModelForm(request.POST)
         if form.is_valid():
            # form.save()
            contact_form = ContactForm.objects.create(**form.cleaned_data)             
@@ -31,8 +31,8 @@ def contacto(request):
         # contact_form.save()
         return HttpResponseRedirect('/exito')  #(reverse('exito'))  # Redirige a la misma página después de enviar el formulario
     else:
-        # form = ContactFormForm()
-        form = ContactFormModelForm()
+        form = ContactFormForm()
+        #form = ContactFormModelForm()
     return render(request, 'contacto.html', {'form': form})
 
 def exito(request):
